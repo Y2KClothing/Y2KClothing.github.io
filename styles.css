@@ -13,9 +13,6 @@ body {
   color: #333;
   line-height: 1.6;
   padding: 20px;
-background-image: url('https://media.istockphoto.com/id/1426324256/vector/abstract-futuristic-galaxy-background-vector-dark-modern-illustration-with-stars-and-lines.jpg?s=612x612&w=0&k=20&c=i_q0gf1dvf2vcTtqknISeTwdRS7NHUm3hlXEmMFxVFo=');
-    background-size: cover; /* Cover the entire page */
-    background-position: center; /* Center the background image */
 }
 
 header {
@@ -84,4 +81,25 @@ footer p a {
     display: block;
     margin: 10px 0;
   }
+body {
+  position: relative;
+}
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://media.istockphoto.com/id/1426324256/vector/abstract-futuristic-galaxy-background-vector-dark-modern-illustration-with-stars-and-lines.jpg?s=612x612&w=0&k=20&c=i_q0gf1dvf2vcTtqknISeTwdRS7NHUm3hlXEmMFxVFo=');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5; /* Adjust the opacity as needed */
+  z-index: -1;
+}
+
+body, body * {
+  position: relative;
+  z-index: 1;
+}
 }
